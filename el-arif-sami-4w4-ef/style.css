@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Theme Name: el-arif-sami-4w4-ef
+Theme Name: eddy-martin-4w4
 Theme URI: http://underscores.me/
 Author: eddy martin
 Author URI: http://referenced.ca
@@ -10,7 +10,7 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: el-arif-sami-4w4-ef
+Text Domain: eddy-martin-4w4
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -49,7 +49,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
-/* couleur menu principal */
+/* couleur menu principal 
+$color__linkmenu: #ece395; //royalblue
+$color__linkmenu-visited: #cecc84; //purple
+$color__linkmenu-hover: #ffffff; //midnightblue
+*/
+/* couleur menu principal DEUXIEME*/
 /* couleur .site-title */
 /*--------------------------------------------------------------
 # Generic
@@ -541,11 +546,11 @@ a:hover, a:active {
 }
 
 .main-navigation a, .site-footer a {
-  color: #ece395;
+  color: #e987ab;
 }
 
 .main-navigation a:visited, .site-footer a:visited {
-  color: #cecc84;
+  color: #d87599;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active, .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
@@ -735,7 +740,7 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #000;
+  background-color: #FDE2E4;
   text-align: left;
   z-index: 99999;
   /* fin du sub-menu */
@@ -749,10 +754,12 @@ textarea {
   transition: left .5s;
   left: -999em;
   z-index: 99999;
+  padding: 3px;
 }
 
 .main-navigation ul ul li a {
   padding-left: 20px;
+  color: #e987ab;
 }
 
 .main-navigation ul ul a {
@@ -1110,7 +1117,7 @@ menu tablet
 /* local
 --------------------------------------------- */
 body.home {
-  background-color: fff;
+  background-color: #EBF0FE;
   height: 500vh;
   width: 100vw;
   overflow-x: hidden;
@@ -1131,7 +1138,7 @@ body.home::after {
 @media (min-width: 800px) {
   body.home::after {
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 80% 100%);
-    background-color: #4475ad;
+    background-color: #BDE0FE;
   }
 }
 
@@ -1158,6 +1165,7 @@ Liste des blocs de cours par type_de_cours
 
 .home .cours h2 {
   text-align: center;
+  color: #A2D2FF;
 }
 
 .home .cours section.bloc {
@@ -1211,8 +1219,9 @@ Liste des blocs de cours par type_de_cours
 
 #annonce {
   margin-top: 20px;
-  background-color: #ddd;
+  background-color: #F7E9E8;
   height: 10vh;
+  opacity: 0.75;
 }
 
 /* local carrousel
@@ -1266,8 +1275,10 @@ Liste des blocs de cours par type_de_cours
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  border-radius: 40px;
+  height: 20vh;
+  justify-content: center;
 }
 
 @media (min-width: 800px) {
@@ -1284,19 +1295,26 @@ Liste des blocs de cours par type_de_cours
 .carrousel-2 .slide__conteneur .slide .slide__info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info p {
   font-size: .8rem;
+  color: #FDE2E4;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info a {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
+  color: #FFC8DD;
+  font-weight: bold;
+  text-align: center;
 }
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
-  background-color: #00ff37;
+  background-color: #CDB4DB;
 }
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(2) {

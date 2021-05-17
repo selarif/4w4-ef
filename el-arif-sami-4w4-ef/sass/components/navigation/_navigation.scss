@@ -10,9 +10,11 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: #000;
+		background-color: #FDE2E4;
 		text-align : left;
 		z-index: 99999;
+
+		
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -22,9 +24,12 @@
 			left: -999em;
 			z-index: 99999;
 
+			padding: 3px;
+
 			li {
-				a{
+				a{ /// Les sous menus
 				padding-left : 20px;
+				color: #e987ab;
 				}
 			}
 

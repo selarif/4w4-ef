@@ -1,5 +1,5 @@
 body.home {
-    background-color : fff;
+    background-color : #EBF0FE;
     height : 500vh;
     width : 100vw;
     overflow-x :hidden;
@@ -16,7 +16,7 @@ body.home::after{
     right : 0;
     @include tablet{
         clip-path : polygon(90% 0, 100% 0, 100% 100% , 80% 100%);
-         background-color: rgb(68, 117, 173);
+         background-color: #BDE0FE;
     }
    z-index: -1;
 }
@@ -49,6 +49,7 @@ Liste des blocs de cours par type_de_cours
     h2 {
         text-align: center;
         
+        color : #A2D2FF;
     }
     section.bloc {
        
@@ -101,7 +102,8 @@ Liste des blocs de cours par type_de_cours
 
 #annonce {
     margin-top : 20px;
-    background-color: #ddd;
+    background-color: #F7E9E8;
     height : 10vh;
+    opacity: 0.75;
 }
 
