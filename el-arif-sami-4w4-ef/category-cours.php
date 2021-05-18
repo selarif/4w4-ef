@@ -46,6 +46,24 @@ get_header();
 						<section <?php echo class_composant($tPropriété['session']) ?>>
 					<?php endif;  
                             
+                            if (in_array($tPropriété['session'], ['1']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' ); 
+                            elseif (in_array($tPropriété['session'], ['2']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['3']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['4']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['5']) ) : 
+                                get_template_part( 'template-parts/content', 'cours');
+                            elseif (in_array($tPropriété['session'], ['6']) ) : 
+                                get_template_part( 'template-parts/content', 'cours');      
+                                              
+                            
+                                
+                                 
+                        endif;	
+                        $precedent = $tPropriété['session'];            
                 endwhile;?>
 			</section> <!-- fin section cours -->
 		
