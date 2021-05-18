@@ -40,7 +40,9 @@
    LES MODIFICATIONS DE LA PAGE DE COURS
    -------------------------------------- */
    .LesCours{
-       width: 100%;
+       width: 80vw;
+       height: 1200vh;
+       background-color: red;
        
         
    }
@@ -50,7 +52,7 @@
 }
 .contenu{
     display: flex;
-    width: 10vw;
+    width: 90%;
     background-color: #A2D2FF;
     color: #fff2f3;
     margin: 2%;
@@ -58,12 +60,12 @@
     text-shadow: 3px 2px 0 #FFAFCC;
     border-radius: 20px;
     transition: all 0.5s;
-
     @include desktop {
         transform: rotateZ(0deg); 
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        height: 30vh;
     } 
     h4 {
         transition: all 0.5s;
@@ -81,3 +83,10 @@
     }
     
 }
+
+/*.contenu:nth-child(1), .contenu:nth-child(2), .contenu:nth-child(3){
+    background-color: purple;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+}*/

@@ -36,14 +36,31 @@ get_header();
                     convertirTableau($tPropriété); /// à chaque fois que le précédent est différent de la session présente, créer une nouvelle section
 					if ($tPropriété['session'] != $precedent): 
                             if ("XXXXXX" != $precedent): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle ?>
-                                </section>
+                                
                             <?php endif;?>
                             <h2 class="NumSession"><?php echo $tPropriété['session'] /// On affiche le numero de session. Mais comment le trier ? ?></h2>
 							<section class="contenu">
-                                <?php get_template_part( 'template-parts/content', 'cours' ); ?>
+                                <?php if (in_array($tPropriété['session'], ['1']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' ); 
+                            elseif (in_array($tPropriété['session'], ['2']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['3']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['4']) ) : 
+                                get_template_part( 'template-parts/content', 'cours' );
+                            elseif (in_array($tPropriété['session'], ['5']) ) : 
+                                get_template_part( 'template-parts/content', 'cours');
+                            elseif (in_array($tPropriété['session'], ['6']) ) : 
+                                get_template_part( 'template-parts/content', 'cours');      
+                                              
+                            
+                                
+                                 
+                        endif;	
+                        $precedent = $tPropriété['session']; ?>
 							</section>
 					  	
-						<section <?php echo class_composant($tPropriété['session']) ?>>
+						
 					<?php endif;  
                             
                             if (in_array($tPropriété['session'], ['1']) ) : 
