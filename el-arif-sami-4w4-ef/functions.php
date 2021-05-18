@@ -237,9 +237,9 @@ function extraire_cours($query){
 	if ($query->is_category('cours'))
 	{
 		$query->set('posts_per_page', -1);
-		//$query->set('meta_key', 'session');
-		$query->set('orderby', 'session');
-		$query->set('order', 'desc');
+		$query->set('meta_key', 'session');
+		$query->set('orderby', array('session' => 'ASC'));
+		//$query->set('order', 'desc');
 	}
 
 }

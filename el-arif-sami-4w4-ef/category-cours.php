@@ -28,19 +28,19 @@ get_header();
                 $precedent = "XXXXXXX";
                 while ( have_posts() ) :
                     the_post();
-                        /*if (in_array( $tPropriété['session'], ['2'])):
-                            get_template_part( 'template-parts/content', 'cours' );
-                        endif; */
-                    /*get_template_part( 'template-parts/content', 'cours' );*/
+                                                /*if (in_array( $tPropriété['session'], ['2'])):
+                                                    get_template_part( 'template-parts/content', 'cours' );
+                                                endif; */
+                                            /*get_template_part( 'template-parts/content', 'cours' );*/
                  
                     convertirTableau($tPropriété); /// à chaque fois que le précédent est différent de la session présente, créer une nouvelle section
-					if ($precedent != $tPropriété['session']): ?>
-                            <?php if ($precedent != "XXXXXXX"): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle pour les autres blocs (specifique, web,jeu, etc) ?>
+					if ($tPropriété['session'] != $precedent): 
+                            if ($precedent != "XXXXXXX"): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle ?>
                                 </section>
                             <?php endif;?>
-                            <h2 class="NumSession"><?php echo $tPropriété['session'] /// Quand c'est Web, Jeu ou Spécifique ajoute le carrousel, sinon ('?'), ajoute la classe bloc (permet d'avoir plus de contrôle sur le css)?></h2>
+                            <h2 class="NumSession"><?php echo $tPropriété['session'] /// On affiche le numero de session. Mais comment le trier ? ?></h2>
 							<section class="contenu">
-                                <?php get_template_part( 'template-parts/content', 'cours' ) ?>
+                                <?php get_template_part( 'template-parts/content', 'cours' ); ?>
 							</section>
 					  	
 						<section <?php echo class_composant($tPropriété['session']) ?>>
