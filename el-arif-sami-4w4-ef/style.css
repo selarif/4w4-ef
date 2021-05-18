@@ -1562,9 +1562,13 @@ La barre du millieu
    LES MODIFICATIONS DE LA PAGE DE COURS
    -------------------------------------- */
 .LesCours {
-  width: 80vw;
+  width: 70vw;
   height: 1200vh;
-  background-color: red;
+  background-color: #decde7;
+  border-radius: 20px;
+  /*display: flex;
+       justify-content: center;
+       flex-direction: column;*/
 }
 
 .NumSession {
@@ -1582,6 +1586,7 @@ La barre du millieu
   text-shadow: 3px 2px 0 #FFAFCC;
   border-radius: 20px;
   transition: all 0.5s;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.21);
 }
 
 @media (min-width: 1200px) {

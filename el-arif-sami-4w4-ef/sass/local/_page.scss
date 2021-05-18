@@ -40,9 +40,13 @@
    LES MODIFICATIONS DE LA PAGE DE COURS
    -------------------------------------- */
    .LesCours{
-       width: 80vw;
+       width: 70vw;
        height: 1200vh;
-       background-color: red;
+       background-color: #decde7;
+       border-radius: 20px;
+       /*display: flex;
+       justify-content: center;
+       flex-direction: column;*/
        
         
    }
@@ -60,6 +64,8 @@
     text-shadow: 3px 2px 0 #FFAFCC;
     border-radius: 20px;
     transition: all 0.5s;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.21); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.21);
     @include desktop {
         transform: rotateZ(0deg); 
         justify-content: center;
