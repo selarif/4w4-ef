@@ -32,7 +32,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
                 convertirTableau($tPropriété);
-				//print_r($tPropriété);
+				//print_r($tPropriété); 
 				if ($tPropriété['typeCours'] != $precedent): 
 					if ("XXXXXX" != $precedent)	: ?>
 						</section>

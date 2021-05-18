@@ -35,7 +35,7 @@ get_header();
                  
                     convertirTableau($tPropriété); /// à chaque fois que le précédent est différent de la session présente, créer une nouvelle section
 					if ($tPropriété['session'] != $precedent): 
-                            if ($precedent != "XXXXXXX"): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle ?>
+                            if ("XXXXXX" != $precedent): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle ?>
                                 </section>
                             <?php endif;?>
                             <h2 class="NumSession"><?php echo $tPropriété['session'] /// On affiche le numero de session. Mais comment le trier ? ?></h2>

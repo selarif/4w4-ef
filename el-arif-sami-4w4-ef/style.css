@@ -1565,12 +1565,12 @@ La barre du millieu
   width: 100%;
 }
 
-.LesCours .NumSession {
+.NumSession {
   flex-direction: column;
   color: blue;
 }
 
-.LesCours .contenu {
+.contenu {
   display: flex;
   width: 10vw;
   background-color: #A2D2FF;
@@ -1583,7 +1583,7 @@ La barre du millieu
 }
 
 @media (min-width: 1200px) {
-  .LesCours .contenu {
+  .contenu {
     transform: rotateZ(0deg);
     justify-content: center;
     flex-direction: column;
@@ -1591,23 +1591,23 @@ La barre du millieu
   }
 }
 
-.LesCours .contenu h4 {
+.contenu h4 {
   transition: all 0.5s;
   transform: rotateZ(-90deg);
 }
 
 @media (min-width: 1200px) {
-  .LesCours .contenu h4 {
+  .contenu h4 {
     transform: rotateZ(0deg);
   }
 }
 
-.LesCours .contenu h6 {
+.contenu h6 {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .LesCours .contenu h6 {
+  .contenu h6 {
     display: block;
   }
 }

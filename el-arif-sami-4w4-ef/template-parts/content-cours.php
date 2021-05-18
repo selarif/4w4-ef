@@ -9,12 +9,8 @@
 global $tPropriété;
 ?>
 <!--
-<article>
-	<p>/*<?php /*echo $tPropriété['sigle'] . " - " . $tPropriété['typeCours'] . " - " . $tPropriété['nbHeure'] ; ?></p>
-	<a href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>
-	<p>Session : <?php echo $tPropriété['session'];*/  ?></p>
-</article>-->
-        <!-- <h1 class="NumSession"><?php //echo $tPropriété['session'] = substr($tPropriété['titre'], 4,1);?></h1> -->
+
+        <h1 class="NumSession"><?php //echo $tPropriété['session'] = substr($tPropriété['titre'], 4,1);?></h1> -->
 <div class="contenu">
     <h6 ><?php $tPropriété['titre'] = get_the_title(); echo $tPropriété['typeCours'] = get_field('type_de_cours');?></h6>
     <!-- <a href="<?php //echo get_permalink(); ?>"><?php //echo $tPropriété['titre']; ?></a> -->
