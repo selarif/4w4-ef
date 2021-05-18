@@ -16,22 +16,40 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<section id="annonce"></section>
 				<h1 class="page-title">Cours</h1>
 				<?php
 				//the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			<section class="cours">
-			<?php
-			while ( have_posts() ) :
-				the_post();
-                
-                get_template_part( 'template-parts/content', 'cours' );
-			endwhile;?>
+			<section class="LesCours">
+                <?php
+                /* Start the Loop */
+                $precedent = "XXXXXXX";
+                while ( have_posts() ) :
+                    the_post();
+                        /*if (in_array( $tPropriété['session'], ['2'])):
+                            get_template_part( 'template-parts/content', 'cours' );
+                        endif; */
+                    /*get_template_part( 'template-parts/content', 'cours' );*/
+                 
+                    convertirTableau($tPropriété); /// à chaque fois que le précédent est différent de la session présente, créer une nouvelle section
+					if ($precedent != $tPropriété['session']): ?>
+                            <?php if ($precedent != "XXXXXXX"): /// Quand $precedent n'est pas comme en premier (XXXXXX), alors restart la boucle pour les autres blocs (specifique, web,jeu, etc) ?>
+                                </section>
+                            <?php endif;?>
+                            <h2 class="NumSession"><?php echo $tPropriété['session'] /// Quand c'est Web, Jeu ou Spécifique ajoute le carrousel, sinon ('?'), ajoute la classe bloc (permet d'avoir plus de contrôle sur le css)?></h2>
+							<section class="contenu">
+                                <?php get_template_part( 'template-parts/content', 'cours' ) ?>
+							</section>
+					  	
+						<section <?php echo class_composant($tPropriété['session']) ?>>
+					<?php endif;  
+                            
+                endwhile;?>
 			</section> <!-- fin section cours -->
-		<?php endif; ?>
+		
+            <?php endif ?>
 
 	
 
@@ -64,15 +82,10 @@ function convertirTableau(&$tPropriété)
 }
 
 
-function class_composant($typeCours){
+function class_composant($numSession){
 
-	if (in_array($typeCours, ['Web', 'Jeu', 'Spécifique'])){
+	if (in_array($numSession, ['Web', 'Jeu', 'Spécifique'])){
 		return 'class="carrousel-2"';
 	}
-	elseif ($typeCours == 'Projets'){
-		return 'class="galerie"';
-	}
-	else {
-		return 'class="bloc"';
-	}
 }
+?>

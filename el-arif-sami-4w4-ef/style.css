@@ -1558,6 +1558,60 @@ La barre du millieu
   margin: 0;
 }
 
+/* --------------------------------------
+   LES MODIFICATIONS DE LA PAGE DE COURS
+   -------------------------------------- */
+.LesCours {
+  width: 100%;
+}
+
+.LesCours .NumSession {
+  flex-direction: column;
+  color: blue;
+}
+
+.LesCours .contenu {
+  display: flex;
+  width: 10vw;
+  background-color: #A2D2FF;
+  color: #fff2f3;
+  margin: 2%;
+  text-align: center;
+  text-shadow: 3px 2px 0 #FFAFCC;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+@media (min-width: 1200px) {
+  .LesCours .contenu {
+    transform: rotateZ(0deg);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.LesCours .contenu h4 {
+  transition: all 0.5s;
+  transform: rotateZ(-90deg);
+}
+
+@media (min-width: 1200px) {
+  .LesCours .contenu h4 {
+    transform: rotateZ(0deg);
+  }
+}
+
+.LesCours .contenu h6 {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .LesCours .contenu h6 {
+    display: block;
+  }
+}
+
 /* local footer
 --------------------------------------------- */
 .site-footer {
