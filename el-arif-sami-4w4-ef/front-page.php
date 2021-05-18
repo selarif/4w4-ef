@@ -97,7 +97,7 @@ function convertirTableau(&$tPropriété)
 
 	$tPropriété['titre'] = get_the_title(); 
 	$tPropriété['sigle'] = substr($tPropriété['titre'], 0, 7);
-	$tPropriété['nbHeure'] = substr($tPropriété['titre'],-4,3);
+	$tPropriété['nbHeure'] = substr($tPropriété['titre'],-6,6);
 	$tPropriété['titrePartiel'] = substr($tPropriété['titre'],8,-6);
 	$tPropriété['session'] = substr($tPropriété['titre'], 4,1);
 	$tPropriété['typeCours'] = get_field('type_de_cours');
@@ -115,4 +115,15 @@ function class_composant($typeCours){
 	else {
 		return 'class="bloc"';
 	}
+}
+
+function extraire_cours($query){
+	if ($query->is_category('cours'))
+	{
+		$query->set('posts_per_page', -1);
+		//$query->set('meta_key', 'session');
+		$query->set('orderby', 'session');
+		$query->set('order', 'desc');
+	}
+
 }

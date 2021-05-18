@@ -230,13 +230,14 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
+// extraire selon la session, l<Autre est correct. Il faut le faire afficher dans front-page
 function extraire_cours($query){
 	if ($query->is_category('cours'))
 	{
 		$query->set('posts_per_page', -1);
-		$query->set('orderby', 'title');
-		$query->set('order', 'asc');
+		//$query->set('meta_key', 'session');
+		$query->set('orderby', 'session');
+		$query->set('order', 'desc');
 	}
 
 }
